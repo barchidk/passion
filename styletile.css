@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+}
+
+    {
+    --bg-color: #9f1c19;
+    --link-color: #65d1fb;
+    --link-hover-color: #ff8500;
+    --color-4: #05abeb;
+    --color-5: #ff241f;
+    --primary-font: "Open Sans", sans-serif;
+    --secondary-font: "Droid Serif", serif;
+    --main-text-color: #222222;
+    --white-space: 1rem;
+}
+
+:root {
+    --bg-color: #000;
+    --link-color: #000;
+    --link-hover-color: #000;
+    --color-4: #000;
+    --color-5: #000;
+
+    --primary-font: sans-serif;
+    --secondary-font: serif;
+    --main-text-color: #000;
+
+    --white-space: 0.5rem;
+}
+
+
+
+html {
+    font-size: 100%;
+    font-family: chaparral-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header,
+main,
+footer {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: calc(1*var(--white-space));
+}
+
+.full-width {
+    background: var(--bg-color);
+    color: #FCFCFC;
+    width: 100%
+}
+
+.header-wrapper h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    padding-right: .75em;
+    font-weight: bold;
+    color: #FCFCFC;
+}
+
+.header-wrapper h2 {
+    font-size: 4em;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: bold;
+    margin: var(--white-space) 0;
+}
+
+.header-wrapper h3 {
+    font-size: 2rem;
+}
+
+.header-wrapper h4 {
+    font-size: 0.8rem;
+}
+
+main {
+    padding: calc(2*var(--white-space));
+}
+
+section {
+    margin-bottom: calc(2*var(--white-space));
+}
+
+.section-heading {
+    font-family: chaparral-pro, serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+    font-style: ;
+    font-size: 1.3rem;
+    color: #777;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+ul {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    list-style: none;
+}
+
+.swatches li {
+    margin-right: 3%;
+    height: 10vw;
+    width: 20%;
+}
+
+ul li:last-child {
+    margin-right: 0;
+}
+
+.color-swatch-1 {
+    background-color: #E4CB23;
+}
+
+.color-swatch-2 {
+    background-color: #5E5E5E;
+}
+
+.color-swatch-3 {
+    background-color: #050504;
+}
+
+.color-swatch-4 {
+    background-color: #FCFCFC;
+    border: solid black 1px;
+}
+
+
+.modal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    background-color: #E4CB23;
+    border: solid black 1px;
+    padding: 2rem;
+    margin: 3rem;
+}
+
+.modal div {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 9rem;
+    height: 9rem;
+    background-color: none;
+    text-align: center;
+    border: solid black 1px;
+}
+
+.modal h1 {
+    grid-column: 2/2;
+    grid-row: 1/1;
+    text-align: center;
+    font-size: 2em;
+}
+
+.modal p {
+    grid-column: 1/ span 2;
+    grid-row: 2/2;
+}
+
+.typography-main {
+    color: var(--main-text-color);
+}
+
+.h1-sample {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.h2-sample {
+    font-family: chaparral-pro, serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+    font-style: italic;
+    font-size: 1.25rem;
+}
+
+p.typography-sample {
+    font-family:  chaparral-pro, serif;
+    line-height: 1.5;
+    max-width: 960px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+a {
+    font-family:  chaparral-pro, serif;
+    color:#5E5E5E
+ ;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+a:hover {
+    color: #E4CB23;
+}
+
+p[class*="font-details-"] {
+    margin-top: .5rem;
+    margin-bottom: calc(2*var(--white-space));
+    font-size: 0.75rem;
+    font-family: chaparral-pro, serif;
+    color: #6f6f6f;
+}
+
+.adjectives ul {
+    font-size: 2rem;
+    opacity: 0.5;
+}
+
+.adjectives ul {
+    flex-direction: column;
+}
+
+
+
+@media (min-width:800px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4rem;
+    }
+
+    .modal {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .swatches li {
+        margin-right: 3%;
+        height: 10vw;
+        width: 20%;
+    }
+
+    .textures li {
+        height: 15vw;
+    }
+}
+
+@media (min-width:900px) {
+    .adjectives ul {
+        flex-direction: row;
+        transform: none;
+    }
+}
